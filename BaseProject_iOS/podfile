@@ -1,0 +1,26 @@
+# 下面两行是指明依赖库的来源地址
+source 'https://github.com/CocoaPods/Specs.git'
+
+# 说明平台是ios，版本是9.0
+platform :ios, '9.0'
+
+# 忽略引入库的所有警告（强迫症者的福音^_^）
+inhibit_all_warnings!
+
+targetsArray = ['基础项目Dev', '基础项目Test', '基础项目']
+targetsArray.each do |t|
+    target t do
+        pod 'AFNetworking', '~> 3.0'
+        pod 'SDWebImage', '~> 4.0'
+        pod 'Masonry'
+        pod 'YYKit'
+        pod 'MBProgressHUD', '~> 1.1.0'
+        pod 'MJExtension'
+        pod 'Realm'
+        pod 'MJRefresh'
+        pod 'IQKeyboardManager'
+        pod 'AvoidCrash', '~> 2.5.2'
+        pod 'Bugly'
+        
+    end
+end
